@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Jasapadu Construction Development Sdn. Bhd. - Building and civil engineering contractor.">
+
+  <title>Our Projects | Jasapadu Construction Development Sdn. Bhd.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/solid.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+
+  <!-- Shared site navigation -->
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        <img src="/asset/Jasapadu logo.png" alt="Jasapadu Logo">
+
+        <span class="brand-name">
+          Jasapadu
+          <small>Construction Development Sdn. Bhd.</small>
+        </span>
+      </a>
+
+      <div class="header-right">
+
+          <div class="quick-contact">
+
+          <a href="tel: +603-5131 1699">
+            <i class="fa-solid fa-phone"></i>
+            +603-5131 1699
+
+          </a>
+
+          <span>|</span>
+
+          <a href="mailto: jasapadufw@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            jasapadufw@gmail.com
+          </a>
+
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"
+          aria-controls="main-navigation">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </button>
+
+        <nav class="main-nav" id="main-navigation">
+
+          <div class="nav-item has-dropdown">
+
+            <a href="about.html" class="nav-link dropdown-toggle" aria-expanded="false">
+
+              About Us
+              <i class="fa-solid fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+
+            </a>
+
+            <div class="nav-dropdown">
+              <a href="about.html">About Us Overview</a>
+              <a href="our-team.html">Our Team</a>
+              <a href="certificates.html">Certificates</a>
+              <a href="organization-chart.html">Organization Chart</a>
+              <a href="milestone.html">Milestone</a>
+            </div>
+
+          </div>
+
+          <a href="services.html" >Services</a>
+          <a href="projects.html" class="active">Our Projects</a>
+          <a href="clients.html">Our Clients</a>
+          <a href="careers.html">Careers</a>
+          <a href="contact.html">Contact Us</a>
+
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Empty page content, as requested -->
+  <main>
+
+    <!-- =========================================
+     BREADCRUMB
+========================================== -->
+
+    <section class="breadcrumb-section">
+
+      <div class="wrap breadcrumb-inner">
+
+        <a href="index.html" class="breadcrumb-home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+
+        <i class="fa-solid fa-chevron-right breadcrumb-arrow"></i>
+
+        <span class="breadcrumb-current">Projects</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+     JASAPADU - COMPLETED PROJECTS
+========================================= -->
+
+    <section class="jcd-projects" id="completed-projects">
+
+      <div class="wrap">
+
+        <!-- Section Heading -->
+        <div class="jcd-projects-heading">
+          <span class="jcd-eyebrow">OUR TRACK RECORD</span>
+
+          <h2>Completed Projects</h2>
+
+          <p>
+            A selection of our completed construction and development
+            projects, demonstrating our experience across residential,
+            industrial and infrastructure works.
+          </p>
+        </div>
+
+        <!-- Project Statistics -->
+        <div class="jcd-project-stats">
+
+          <div class="jcd-stat">
+            <span class="jcd-stat-number">09</span>
+            <span class="jcd-stat-label">Project Contracts</span>
+          </div>
+
+          <div class="jcd-stat">
+            <span class="jcd-stat-number">RM 8.87M</span>
+            <span class="jcd-stat-label">Combined Contract Value</span>
+          </div>
+
+          <div class="jcd-stat">
+            <span class="jcd-stat-number">2003–2010</span>
+            <span class="jcd-stat-label">Project Period</span>
+          </div>
+
+        </div>
+
+        <!-- Filters -->
+        <div class="jcd-project-toolbar">
+
+          <div class="jcd-project-filters" aria-label="Filter projects">
+
+            <button class="jcd-filter-btn active" type="button" data-filter="all">
+              All Projects
+            </button>
+
+            <button class="jcd-filter-btn" type="button" data-filter="industrial">
+              Industrial
+            </button>
+
+            <button class="jcd-filter-btn" type="button" data-filter="residential">
+              Residential
+            </button>
+
+            <button class="jcd-filter-btn" type="button" data-filter="infrastructure">
+              Infrastructure
+            </button>
+
+          </div>
+
+          <div class="jcd-project-search">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" id="jcdProjectSearch" placeholder="Search projects..."
+              aria-label="Search completed projects">
+          </div>
+
+        </div>
+
+        <!-- Project Cards -->
+        <div class="jcd-project-grid" id="jcdProjectGrid">
+
+          <!-- JavaScript renders project cards here -->
+
+        </div>
+
+        <!-- Empty Search Result -->
+        <div class="jcd-no-results" id="jcdNoResults" hidden>
+          <span>⌕</span>
+          <h3>No projects found</h3>
+          <p>Try searching with another project name or client.</p>
+        </div>
+
+      </div>
+
+      <!-- Project Details Modal -->
+      <div class="jcd-project-modal" id="jcdProjectModal" aria-hidden="true">
+
+        <div class="jcd-modal-overlay" data-close-modal></div>
+
+        <div class="jcd-modal-content" role="dialog" aria-modal="true" aria-labelledby="jcdModalTitle">
+
+          <button class="jcd-modal-close" type="button" aria-label="Close project details" data-close-modal>
+            &times;
+          </button>
+
+          <div class="jcd-modal-top">
+            <span class="jcd-modal-category" id="jcdModalCategory"></span>
+            <span class="jcd-modal-number" id="jcdModalNumber"></span>
+          </div>
+
+          <h3 id="jcdModalTitle"></h3>
+
+          <div class="jcd-modal-divider"></div>
+
+          <div class="jcd-modal-details">
+
+            <div class="jcd-detail-item">
+              <span>Client</span>
+              <strong id="jcdModalClient"></strong>
+            </div>
+
+            <div class="jcd-detail-item">
+              <span>Contract Value</span>
+              <strong id="jcdModalValue"></strong>
+            </div>
+
+            <div class="jcd-detail-item">
+              <span>Project Period</span>
+              <strong id="jcdModalPeriod"></strong>
+            </div>
+
+          </div>
+
+          <p class="jcd-modal-description" id="jcdModalDescription"></p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+     JASAPADU - PROJECT WORK GALLERY
+========================================= -->
+
+
+    <!-- =========================================
+     JASAPADU - PREMIUM WORK GALLERY
+========================================= -->
+
+    <section class="jcd-gallery" id="project-gallery">
+      <div class="wrap">
+
+        <div class="jcd-gallery-heading">
+          <div class="jcd-gallery-intro">
+            <span class="jcd-eyebrow">OUR WORK IN ACTION</span>
+            <h2>Building Progress.<br><span>Real Results.</span></h2>
+            <p>
+              Explore moments from our construction sites,
+              project developments and the people behind our work.
+            </p>
+          </div>
+
+          <div class="jcd-gallery-count">
+            <strong>50+</strong>
+            <span>Project Photographs</span>
+          </div>
+        </div>
+
+        <div class="jcd-gallery-grid">
+
+          <!-- IMAGE 01 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/Team pic 01.jpeg" alt="Construction site preparation">
+            <div class="jcd-gallery-overlay">
+              <span>01 / CONSTRUCTION</span>
+              <h3>Construction Site</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 02 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p20.jpeg" alt="Building construction work">
+            <div class="jcd-gallery-overlay">
+              <span>02 / PROJECT WORK</span>
+              <h3>Building Development</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 03 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p24.jpeg" alt="Construction machinery">
+            <div class="jcd-gallery-overlay">
+              <span>03 / MACHINERY</span>
+              <h3>Heavy Equipment</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 04 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/Team pic.jpeg" alt="On-site construction team">
+            <div class="jcd-gallery-overlay">
+              <span>04 / OUR TEAM</span>
+              <h3>On-Site Team</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 05 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p25.jpeg" alt="Concrete construction work">
+            <div class="jcd-gallery-overlay">
+              <span>05 / CONSTRUCTION</span>
+              <h3>Concrete Works</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 06 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p13.jpeg" alt="Building project progress">
+            <div class="jcd-gallery-overlay">
+              <span>06 / DEVELOPMENT</span>
+              <h3>Project Progress</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 07 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p26.jpeg" alt="Construction workers">
+            <div class="jcd-gallery-overlay">
+              <span>07 / OUR TEAM</span>
+              <h3>Site Operations</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 08 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p9.jpeg" alt="Construction finishing work">
+            <div class="jcd-gallery-overlay">
+              <span>08 / FINISHING</span>
+              <h3>Finishing Works</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 09 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p12.jpeg" alt="Construction project">
+            <div class="jcd-gallery-overlay">
+              <span>09 / PROJECT WORK</span>
+              <h3>Project Execution</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 10 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p18.jpeg" alt="Construction machinery on site">
+            <div class="jcd-gallery-overlay">
+              <span>10 / MACHINERY</span>
+              <h3>Site Equipment</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 11 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p05.jpeg" alt="Construction team at work">
+            <div class="jcd-gallery-overlay">
+              <span>11 / OUR TEAM</span>
+              <h3>Team at Work</h3>
+            </div>
+          </div>
+
+          <!-- IMAGE 12 -->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p33.jpeg" alt="Completed construction work">
+            <div class="jcd-gallery-overlay">
+              <span>12 / PROJECT WORK</span>
+              <h3>Construction Works</h3>
+            </div>
+          </div>
+          <!-- IMAGE 13-->
+          <div class="jcd-gallery-item">
+            <img src="asset/gallery/team 01/p02.jpeg" alt="Completed construction work">
+            <div class="jcd-gallery-overlay">
+              <span>13 / Tile WORK</span>
+              <h3>Tile Works</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- LOAD MORE -->
+        <div class="jcd-gallery-load-wrap">
+          <button class="jcd-gallery-load" id="jcdGalleryLoad" type="button">
+            <span>Load More Photos</span>
+            <span class="jcd-load-icon">↓</span>
+          </button>
+          <p class="jcd-gallery-load-note" id="jcdGalleryLoadNote">
+            Showing 12 photographs
+          </p>
+        </div>
+
+      </div>
+
+      <!-- LIGHTBOX -->
+      <div class="jcd-lightbox" id="jcdLightbox" aria-hidden="true">
+
+        <button class="jcd-lightbox-close" type="button" aria-label="Close">&times;</button>
+
+        <button class="jcd-lightbox-arrow jcd-lightbox-prev" type="button" aria-label="Previous image">&#10094;</button>
+
+        <div class="jcd-lightbox-content">
+          <img id="jcdLightboxImage" src="" alt="Project photograph">
+
+          <div class="jcd-lightbox-caption">
+            <h3 id="jcdLightboxTitle"></h3>
+            <span id="jcdLightboxCounter"></span>
+          </div>
+        </div>
+
+        <button class="jcd-lightbox-arrow jcd-lightbox-next" type="button" aria-label="Next image">&#10095;</button>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+  <footer class="footer">
+
+    <div class="wrap footer-main">
+
+      <div class="contact-info" data-animate="fade-up">
+
+        <h3>Contact Information</h3>
+
+        <div class="contact-pair">
+
+          <p>
+            Telephone<br>
+            <a href="tel: +603-5131 1699"> +603-5131 1699</a>
+          </p>
+
+          <p>
+            Email<br>
+            <a href="mailto:jasapadufw@gmail.com">jasapadufw@gmail.com</a>
+          </p>
+
+        </div>
+
+        <p>
+          Address<br>
+
+          <span>
+            Jasapadu Construction Development Sdn. Bhd.<br>
+            Level 15 Dpluze Lingkaran Cyber Point Timur Cyber 12 63000 Cyberjaya Selangor
+          </span>
+        </p>
+
+      </div>
+
+
+      <div class="certifications" data-animate="fade-up" data-delay="200">
+
+        <h3>Certified By</h3>
+
+        <div class="certification-logos">
+
+          <div class="certification-card">
+            <img src="asset/certificate/certificate logo/cl1.png" alt="Jasapadu Certification 1">
+          </div>
+
+          <div class="certification-card">
+            <img src="asset/certificate/certificate logo/cl2.png" alt="Jasapadu Certification 2">
+          </div>
+
+          <div class="certification-card">
+            <img src="asset/certificate/certificate logo/cl3.png" alt="Jasapadu Certification 3">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="wrap">
+
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html" class="active">Our Projects</a>
+          <a href="clients.html">Our Clients</a>
+          <a href="careers.html">Careers</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <p>
+          Copyright 2026 by Jasapadu Construction Development Sdn. Bhd.
+          All Rights Reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-top" aria-label="Back to top">↑</button>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+  <script src="projects.js"></script>
+
+</body>
+
+</html>

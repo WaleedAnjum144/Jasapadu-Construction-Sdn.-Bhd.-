@@ -1,0 +1,762 @@
+/* =========================================
+   Team PAGE BREADCRUMB
+========================================= */
+
+.breadcrumb-section {
+    width: 100%;
+    background: #f5f7fa;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.breadcrumb-inner {
+    max-width: 1200px;
+    min-height: 58px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.breadcrumb-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-home:hover {
+    color: var(--primary);
+}
+
+.breadcrumb-home i {
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.breadcrumb-arrow {
+    color: #a0a8b3;
+    font-size: 11px;
+}
+
+.breadcrumb-current {
+    font-family: 'Inter', Arial, 'Noto Sans SC';
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 775px) {
+    .breadcrumb-inner {
+        min-height: 50px;
+        padding: 0 18px;
+        gap: 10px;
+    }
+
+    .breadcrumb-home,
+    .breadcrumb-current {
+        font-size: 13px;
+    }
+}
+
+
+
+/* =========================================
+   ORGANISATION CHART - MODERN DESIGN
+========================================= */
+
+.organisation-section {
+    width: 100%;
+    padding: 60px 0 60px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.org-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.org-header {
+    max-width: 800px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.org-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.org-header h1 {
+    margin: 0 0 18px;
+    color: #123b57;
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(32px, 4vw, 43px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.org-header p {
+    max-width: 680px;
+    margin: auto;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.org-title-line {
+    width: 65px;
+    height: 4px;
+    margin: 25px auto 0;
+    border-radius: 5px;
+    background: var(--primary);
+}
+
+/* =========================================
+   ORGANISATION TREE
+========================================= */
+
+.org-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================
+   DIRECTORS
+========================================= */
+
+.org-leadership {
+    width: 100%;
+    max-width: 790px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.org-leader-card {
+    position: relative;
+    min-height: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 25px;
+    overflow: hidden;
+    text-align: center;
+    background: #123b57;
+    border-radius: 14px;
+    border-bottom: 5px solid var(--primary);
+    box-shadow: 0 12px 30px rgba(18, 59, 87, .12);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.org-leader-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 38px rgba(18, 59, 87, .18);
+}
+
+.org-leader-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    right: -65px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.055);
+}
+
+.org-card-label {
+    color: #a9c7df;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.org-avatar {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 17px 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.13);
+    border: 1px solid rgba(255,255,255,.25);
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.org-leader-card h3 {
+    max-width: 330px;
+    margin: 0;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.org-leader-card p {
+    margin: 9px 0 0;
+    color: #c3d5e4;
+    font-size: 13px;
+}
+
+/* =========================================
+   CONNECTING LINES
+========================================= */
+
+.org-tree-connector {
+    width: 2px;
+    height: 55px;
+    background: #c7d3df;
+    position: relative;
+}
+
+.org-tree-connector::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #c7d3df;
+    border-bottom: 2px solid #c7d3df;
+    transform: rotate(45deg);
+}
+
+/* =========================================
+   GENERAL MANAGER
+========================================= */
+
+.org-manager-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.org-manager-card {
+    width: 100%;
+    max-width: 510px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 24px 30px;
+    background: #fff;
+    border: 1px solid #dce5ee;
+    border-left: 5px solid var(--primary);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(18,59,87,.07);
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.org-manager-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(18,59,87,.12);
+}
+
+.org-manager-icon {
+    flex-shrink: 0;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf1f7;
+    color: var(--primary);
+    border-radius: 14px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.org-manager-card .org-card-label {
+    color: var(--primary);
+}
+
+.org-manager-card h3 {
+    margin: 5px 0;
+    color: #123b57;
+    font-family: 'Roboto Slab', serif;
+    font-size: 21px;
+}
+
+.org-manager-card p {
+    margin: 0;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   DEPARTMENT TREE
+========================================= */
+
+.org-department-tree {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 25px;
+    padding-top: 5px;
+}
+
+/* Horizontal connecting line */
+.org-branch-line {
+    position: absolute;
+    top: -1px;
+    left: 16.666%;
+    right: 16.666%;
+    height: 2px;
+    background: #c7d3df;
+}
+
+/* Department cards */
+.org-unit {
+    position: relative;
+    min-width: 0;
+    padding: 27px 23px;
+    background: #fff;
+    border: 1px solid #e3eaf1;
+    border-top: 4px solid var(--primary);
+    border-radius: 12px;
+    box-shadow: 0 7px 25px rgba(18,59,87,.055);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.org-unit::before {
+    content: "";
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    height: 28px;
+    width: 2px;
+    background: #c7d3df;
+}
+
+.org-unit:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 32px rgba(18,59,87,.10);
+}
+
+.org-unit-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 17px;
+    border-radius: 11px;
+    background: #eaf1f7;
+    color: var(--primary);
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.org-unit-category {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.org-unit h3 {
+    min-height: 54px;
+    margin: 0 0 20px;
+    color: #123b57;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   TEAM MEMBER BOXES
+========================================= */
+
+.org-member {
+    padding: 17px 15px;
+    background: #f6f8fb;
+    border: 1px solid #edf0f4;
+    border-radius: 8px;
+}
+
+.org-position {
+    display: block;
+    margin-bottom: 7px;
+    color: #758397;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .9px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.org-member strong,
+.org-reporting strong,
+.org-technical-card > strong {
+    display: block;
+    color: #123b57;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+/* Subordinate positions */
+
+.org-reporting {
+    margin-top: 15px;
+    padding: 14px 15px;
+    background: #eef3f8;
+    border-left: 3px solid var(--primary);
+    border-radius: 6px;
+}
+
+.org-reporting .org-position {
+    color: var(--primary);
+}
+
+/* =========================================
+   PROJECT MANAGEMENT
+========================================= */
+
+.org-project-unit {
+    grid-column: 1 / -1;
+    margin-top: 15px;
+    padding: 32px;
+    border-top: 5px solid #123b57;
+    background: #fff;
+}
+
+.org-project-unit h3 {
+    min-height: auto;
+    font-size: 23px;
+}
+
+.org-project-manager {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background: #123b57;
+    border: none;
+}
+
+.org-project-manager .org-position {
+    color: #b5cee0;
+}
+
+.org-project-manager strong {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Project team heading */
+
+.org-technical-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 35px 0 22px;
+    color: #123b57;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.org-technical-heading span {
+    flex: 1;
+    height: 1px;
+    background: #e1e8ef;
+}
+
+/* Project team grid */
+
+.org-technical-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.org-technical-card {
+    min-width: 0;
+    padding: 19px 14px;
+    background: #f7f9fc;
+    border: 1px solid #e5ebf1;
+    border-radius: 9px;
+    transition: transform .3s ease, border-color .3s ease;
+}
+
+.org-technical-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.org-technical-card > .org-position {
+    min-height: 38px;
+    color: var(--primary);
+}
+
+.org-technical-card > strong {
+    color: #123b57;
+    font-size: 14px;
+}
+
+.org-technical-card .org-reporting {
+    padding: 12px 10px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.org-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.org-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.org-leadership.is-visible {
+    transition-delay: .05s;
+}
+
+.org-manager-wrap.is-visible {
+    transition-delay: .1s;
+}
+
+.org-unit:nth-child(2).is-visible {
+    transition-delay: .1s;
+}
+
+.org-unit:nth-child(3).is-visible {
+    transition-delay: .2s;
+}
+
+.org-unit:nth-child(4).is-visible {
+    transition-delay: .3s;
+}
+
+.org-project-unit.is-visible {
+    transition-delay: .15s;
+}
+
+@media (min-width:570px){
+    .org-project-unit {
+  text-align: -webkit-center;
+}
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .org-department-tree {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .org-branch-line,
+    .org-unit::before {
+        display: none;
+    }
+
+    .org-project-unit {
+        grid-column: 1 / -1;
+    }
+
+    .org-technical-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .organisation-section {
+        padding: 55px 0 70px;
+    }
+
+    .org-container {
+        padding: 0 18px;
+    }
+
+    .org-header {
+        margin-bottom: 42px;
+    }
+
+    .org-header h1 {
+        font-size: 29px;
+    }
+
+    .org-header p {
+        font-size: 14px;
+    }
+
+    .org-leadership {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .org-leader-card {
+        min-height: 205px;
+        padding: 24px 20px;
+    }
+
+    .org-leader-card h3 {
+        font-size: 17px;
+    }
+
+    .org-tree-connector {
+        height: 38px;
+    }
+
+    .org-manager-card {
+        min-height: 105px;
+        padding: 18px;
+        gap: 14px;
+    }
+
+    .org-manager-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .org-manager-card h3 {
+        font-size: 18px;
+    }
+
+    .org-manager-card p {
+        font-size: 12px;
+    }
+
+    .org-department-tree {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 0;
+    }
+
+    .org-unit {
+        padding: 23px 20px;
+    }
+
+    .org-unit h3 {
+        min-height: auto;
+        font-size: 18px;
+    }
+
+    .org-project-unit {
+        grid-column: auto;
+        margin-top: 5px;
+        padding: 23px 16px;
+    }
+
+    .org-project-unit h3 {
+        font-size: 20px;
+    }
+
+    .org-technical-heading {
+        font-size: 15px;
+        gap: 9px;
+    }
+
+    .org-technical-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .org-technical-card {
+        padding: 17px;
+    }
+
+    .org-technical-card > .org-position {
+        min-height: auto;
+    }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .org-container {
+        padding: 0 13px;
+    }
+
+    .org-leader-card {
+        padding: 22px 15px;
+    }
+
+    .org-manager-card {
+        align-items: flex-start;
+        padding: 17px 13px;
+    }
+
+    .org-project-unit {
+        padding: 20px 12px;
+    }
+
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .org-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .org-leader-card,
+    .org-manager-card,
+    .org-unit,
+    .org-technical-card {
+        transition: none;
+    }
+
+}
+
