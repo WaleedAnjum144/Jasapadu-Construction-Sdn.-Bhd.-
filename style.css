@@ -147,6 +147,7 @@ button {
     gap: 12px;
     flex-shrink: 0;
     min-width: 0;
+    text-decoration: none;
 }
 
 .brand img {
@@ -168,11 +169,21 @@ button {
 }
 
 .brand-name small {
-    font: 500 11px Inter, sans-serif;
+    font: 600 14px Inter, sans-serif;
     letter-spacing: .3px;
-    color: var(--muted);
+    color: #000;
 }
 
+/* Registration Number */
+.brand-name .brand-registration {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    color: #FA0202;
+    margin-top: 2px;
+}
+
+/* Scrolled Header */
 .site-header.scrolled .brand img {
     width: 60px;
     height: 55px;
@@ -184,6 +195,10 @@ button {
 
 .site-header.scrolled .brand-name small {
     font-size: 9px;
+}
+
+.site-header.scrolled .brand-name .brand-registration {
+    font-size: 8px;
 }
 
 /* Right side */
@@ -2164,7 +2179,7 @@ button {
 .footer h3 {
     margin: 0 0 22px;
     color: #fff;
-    font: 600 20px/1.4 "Roboto Slab", serif;
+    font: 600 25px/1.4 "Roboto Slab", serif;
 }
 
 /* Contact information */
@@ -2186,6 +2201,132 @@ button {
     flex-wrap: wrap;
     gap: 20px 60px;
 }
+
+
+/* ========================================
+   CORPORATE COMPANY INFORMATION
+======================================== */
+
+.company-info {
+    width: 100%;
+}
+
+/* Company heading */
+
+.company-heading {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.company-heading h4 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-family: "Roboto Slab", serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.registration-number {
+    display: inline-block;
+    color: #9bc6e3;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+span.reg-color{
+    color:#FA0302 ;
+}
+/* Registered address */
+
+.company-address {
+    margin-bottom: 22px;
+}
+
+.info-label,
+.contact-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #9bc6e3;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.company-address p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Contact details */
+
+.company-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 15px 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0 22px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-item:first-child {
+    padding-left: 0;
+}
+
+.contact-item:last-child {
+    border-right: none;
+}
+
+.contact-label {
+    margin-bottom: 6px;
+}
+
+.contact-item a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color .3s ease;
+}
+
+.contact-item a:hover {
+    color: #9bc6e3;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .company-heading h4 {
+        font-size: 17px;
+    }
+
+    .company-contact {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .contact-item {
+        padding: 0;
+        border-right: none;
+    }
+
+}
+
 
 /* ========================================
    CERTIFICATIONS
