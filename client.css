@@ -93,6 +93,7 @@
 }
 
 .clients-heading h1 {
+    font-family: "Roboto Slab", Georgia, serif;
     margin: 0 0 18px;
     color: #172b45;
     font-size: clamp(32px, 4vw, 46px);
