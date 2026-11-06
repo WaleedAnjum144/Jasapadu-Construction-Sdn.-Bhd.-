@@ -32,6 +32,17 @@ html {
     scroll-padding-top: 100px;
 }
 
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    overflow-y: auto;
+}
+
 body {
     margin: 0;
     font-family: Inter, Arial, sans-serif;
