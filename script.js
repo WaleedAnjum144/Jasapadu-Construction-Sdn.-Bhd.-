@@ -874,6 +874,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* =========================================
+   CLIENTS SCROLL REVEAL
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const revealElements = document.querySelectorAll(
+        ".clients-section [data-animate]"
+    );
+
+    if (!("IntersectionObserver" in window)) {
+        revealElements.forEach(element => {
+            element.classList.add("is-visible");
+        });
+        return;
+    }
+
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("is-visible");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15,
+            rootMargin: "0px 0px -40px 0px"
+        }
+    );
+
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+
+});
+
+
+
+
+/* =========================================
    JASAPADU IMAGE GALLERY LIGHTBOX
 ========================================= */
 

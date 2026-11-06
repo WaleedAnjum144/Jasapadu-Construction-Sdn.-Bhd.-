@@ -24,6 +24,7 @@
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
@@ -44,7 +45,7 @@
 
       <div class="header-right">
 
-          <div class="quick-contact">
+        <div class="quick-contact">
 
           <a href="tel: +603-5131 1699">
             <i class="fa-solid fa-phone"></i>
@@ -106,7 +107,298 @@
   </header>
 
   <!-- Empty page content, as requested -->
-  <main></main>
+  <main>
+
+
+    <!-- =========================================
+     BREADCRUMB
+========================================== -->
+
+    <section class="breadcrumb-section">
+
+      <div class="wrap breadcrumb-inner">
+
+        <a href="index.html" class="breadcrumb-home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+
+        <i class="fa-solid fa-chevron-right breadcrumb-arrow"></i>
+
+        <span class="breadcrumb-current">Contact Us</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         JASAPADU CONTACT PAGE
+    ========================================== -->
+
+    <section class="jcd-contact-page">
+
+      <!-- CONTACT INTRO -->
+      <div class="jcd-contact-intro">
+        <div class="wrap">
+
+          <span class="jcd-contact-eyebrow" data-animate="fade-up">
+            CONTACT US
+          </span>
+
+          <h1 data-animate="fade-up" data-delay="100">
+            Let's Build Something Together
+          </h1>
+
+          <p data-animate="fade-up" data-delay="200">
+            Have a project in mind or a question for our team? Visit our office,
+            call us or send an enquiry below and we will reply as soon as possible.
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- MAP + COMPANY INFORMATION -->
+      <div class="jcd-contact-split">
+
+        <!-- MAP: FADE LEFT -->
+        <div class="jcd-contact-map" data-animate="fade-left">
+
+          <div id="jcd-map" class="jcd-map-canvas" role="region"
+            aria-label="Map showing the Jasapadu Construction Development office in Cyberjaya">
+          </div>
+
+          <a class="jcd-map-directions" target="_blank" rel="noopener"
+            href="https://www.google.com/maps/dir/?api=1&amp;destination=Level+15+Dpluze+Lingkaran+Cyber+Point+Timur+Cyber+12+63000+Cyberjaya+Selangor">
+
+            <i class="fa-solid fa-location-arrow" aria-hidden="true"></i>
+            Get directions
+
+          </a>
+
+        </div>
+
+
+        <!-- COMPANY INFORMATION: FADE RIGHT -->
+        <aside class="jcd-contact-info" data-animate="fade-right" data-delay="150">
+
+          <div class="jcd-contact-brand">
+
+            <img src="/asset/Jasapadu logo.png" alt="Jasapadu Logo">
+
+            <div>
+              <strong>Jasapadu</strong>
+              <span>Construction Development Sdn. Bhd.</span>
+            </div>
+
+          </div>
+
+
+          <ul class="jcd-contact-list">
+
+            <!-- OFFICE ADDRESS -->
+            <li>
+              <span class="jcd-contact-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </span>
+
+              <div>
+                <small>Office address</small>
+
+                <p>
+                  Level 15 Dpluze Lingkaran Cyber Point Timur<br>
+                  Cyber 12, 63000 Cyberjaya<br>
+                  Selangor, Malaysia
+                </p>
+              </div>
+            </li>
+
+
+            <!-- TELEPHONE -->
+            <li>
+              <span class="jcd-contact-icon">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </span>
+
+              <div>
+                <small>Telephone</small>
+                <p>
+                  <a href="tel:+60351311699">+603-5131 1699</a>
+                </p>
+              </div>
+            </li>
+
+
+            <!-- EMAIL -->
+            <li>
+              <span class="jcd-contact-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </span>
+
+              <div>
+                <small>Email</small>
+                <p>
+                  <a href="mailto:jasapadufw@gmail.com">jasapadufw@gmail.com</a>
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </aside>
+
+      </div>
+
+
+      <!-- ENQUIRY FORM -->
+      <div class="jcd-contact-form-section">
+        <div class="wrap">
+
+          <div class="jcd-enquiry" data-animate="fade-up">
+
+            <!-- FORM HEADING -->
+            <div class="jcd-enquiry-head">
+
+              <span class="jcd-enquiry-eyebrow" data-animate="fade-up">
+                ENQUIRY FORM
+              </span>
+
+              <h2 data-animate="fade-up" data-delay="100">
+                Submit Your Enquiry
+              </h2>
+
+              <p data-animate="fade-up" data-delay="200">
+                We welcome any enquiries or feedback from you. You may submit your enquiry via the web form below,
+                or alternatively, you may email us at
+                <a href="mailto:jasapadufw@gmail.com">jasapadufw@gmail.com</a>.
+                We will try our best to reply to you as soon as possible.
+              </p>
+
+            </div>
+
+
+            <!-- FORM -->
+            <form id="enquiry-form" class="jcd-enquiry-form" novalidate>
+
+              <div class="jcd-form-grid">
+
+                <!-- LEFT COLUMN -->
+                <div class="jcd-form-col">
+
+                  <div class="jcd-field" data-animate="fade-up">
+                    <label class="sr-only" for="salutation">Salutation</label>
+
+                    <select id="salutation" name="salutation">
+                      <option value="">~ Please select one. ~</option>
+                      <option value="Mr.">Mr.</option>
+                      <option value="Ms.">Ms.</option>
+                      <option value="Mrs.">Mrs.</option>
+                    </select>
+                  </div>
+
+
+                  <div class="jcd-field" data-animate="fade-up" data-delay="100">
+                    <label class="sr-only" for="name">Name</label>
+
+                    <input type="text" id="name" name="name" placeholder="Name*" autocomplete="name" required>
+
+                    <span class="jcd-error" data-error-for="name"></span>
+                  </div>
+
+
+                  <div class="jcd-field" data-animate="fade-up" data-delay="150">
+                    <label class="sr-only" for="company">Company Name</label>
+
+                    <input type="text" id="company" name="company" placeholder="Company Name"
+                      autocomplete="organization">
+                  </div>
+
+
+                  <div class="jcd-field" data-animate="fade-up" data-delay="200">
+                    <label class="sr-only" for="contact">Contact No</label>
+
+                    <input type="tel" id="contact" name="contact" placeholder="Contact No*" autocomplete="tel" required>
+
+                    <span class="jcd-error" data-error-for="contact"></span>
+                  </div>
+
+
+                  <div class="jcd-field" data-animate="fade-up" data-delay="250">
+                    <label class="sr-only" for="email">Email</label>
+
+                    <input type="email" id="email" name="email" placeholder="Email*" autocomplete="email" required>
+
+                    <span class="jcd-error" data-error-for="email"></span>
+                  </div>
+
+                </div>
+
+
+                <!-- RIGHT COLUMN -->
+                <div class="jcd-form-col">
+
+                  <div class="jcd-field" data-animate="fade-up" data-delay="100">
+                    <label class="sr-only" for="subject">Subject</label>
+
+                    <input type="text" id="subject" name="subject" placeholder="Subject*" required>
+
+                    <span class="jcd-error" data-error-for="subject"></span>
+                  </div>
+
+
+                  <div class="jcd-field jcd-field-grow" data-animate="fade-up" data-delay="200">
+                    <label class="sr-only" for="message">Message</label>
+
+                    <textarea id="message" name="message" placeholder="Message*" required></textarea>
+
+                    <span class="jcd-error" data-error-for="message"></span>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- RECAPTCHA -->
+              <div class="jcd-recaptcha" data-animate="fade-up" data-delay="100">
+
+                <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+
+                <span class="jcd-error" id="captcha-error"></span>
+
+              </div>
+
+
+              <!-- FORM ACTIONS -->
+              <div class="jcd-form-actions" data-animate="fade-up" data-delay="200">
+
+                <button type="submit" class="jcd-submit">
+                  Submit Enquiry
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
+
+                <p class="jcd-required-note">
+                  <span class="req">*</span> indicates mandatory field.
+                </p>
+
+              </div>
+
+
+              <!-- FORM STATUS -->
+              <p class="jcd-form-status" id="form-status" role="status" aria-live="polite">
+              </p>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
 
   <!-- =========================================
          FOOTER
@@ -201,6 +493,8 @@
 
   <!-- JAVASCRIPT -->
   <script src="script.js"></script>
+  <script src="contact.js"></script>
 
 </body>
+
 </html>

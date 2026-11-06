@@ -1198,3 +1198,22 @@
         align-items: flex-start;
     }
 }
+
+
+/* FADE UP */
+[data-reveal],
+.jcd-gallery-heading,
+.jcd-gallery-item,
+.jcd-gallery-load-wrap {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+[data-reveal].is-visible,
+.jcd-gallery-heading.is-visible,
+.jcd-gallery-item.is-visible,
+.jcd-gallery-load-wrap.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -590,3 +590,33 @@ document.addEventListener("DOMContentLoaded", function () {
     renderGallery();
 
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const elements = document.querySelectorAll(`
+        [data-reveal],
+        .jcd-gallery-heading,
+        .jcd-gallery-item,
+        .jcd-gallery-load-wrap
+    `);
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+            } else {
+                entry.target.classList.remove("is-visible");
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    elements.forEach(element => observer.observe(element));
+
+});
