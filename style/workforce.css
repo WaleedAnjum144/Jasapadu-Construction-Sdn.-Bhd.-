@@ -1,0 +1,1245 @@
+
+/* =========================================
+   JASAPADU - WORKFORCE PAGE CSS
+========================================= */
+
+
+/* =========================================
+   01. BREADCRUMB
+========================================= */
+
+.breadcrumb-section {
+    width: 100%;
+    background: #f5f7fa;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.breadcrumb-inner {
+    max-width: 1200px;
+    min-height: 58px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.breadcrumb-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.breadcrumb-home:hover {
+    color: var(--primary);
+}
+
+.breadcrumb-home i {
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.breadcrumb-arrow {
+    color: #a0a8b3;
+    font-size: 11px;
+}
+
+.breadcrumb-current {
+    font-family: 'Inter', Arial, 'Noto Sans SC', sans-serif;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   02. WORKFORCE GLOBAL
+========================================= */
+
+.jcd-workforce-page {
+    --wf-primary: #1c4cba;
+    --wf-primary-dark: #1c4cba;
+    --wf-navy: #123b57;
+    --wf-text: #111;
+    --wf-muted: #555;
+    --wf-light: #f5f7fa;
+    --wf-white: #fff;
+
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--wf-text);
+
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+.jcd-workforce-page h1,
+.jcd-workforce-page h2,
+.jcd-workforce-page h3,
+.jcd-workforce-page h4 {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.jcd-workforce-page p {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.jcd-workforce-page img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   03. FADE UP ANIMATION
+   OTHER ELEMENTS ONLY
+========================================= */
+
+.jcd-workforce-page [data-reveal]:not(.jcd-member-card) {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.jcd-workforce-page [data-reveal]:not(.jcd-member-card).is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation delays */
+
+.jcd-workforce-page [data-delay="100"] {
+    transition-delay: .1s;
+}
+
+.jcd-workforce-page [data-delay="150"] {
+    transition-delay: .15s;
+}
+
+.jcd-workforce-page [data-delay="200"] {
+    transition-delay: .2s;
+}
+
+.jcd-workforce-page [data-delay="300"] {
+    transition-delay: .3s;
+}
+
+
+/* =========================================
+   04. WORKFORCE INTRO
+========================================= */
+
+.jcd-workforce-intro {
+    position: relative;
+    padding: 60px 0;
+    background: #fff;
+}
+
+.jcd-workforce-intro-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Intro content */
+
+.jcd-workforce-content {
+    max-width: 680px;
+}
+
+.jcd-workforce-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--wf-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.jcd-workforce-eyebrow::before {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: var(--wf-primary);
+}
+
+.jcd-workforce-content h1 {
+    margin: 0 0 25px;
+    color: #000;
+    font-size: clamp(38px, 4.5vw, 58px);
+    line-height: 1.13;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.jcd-workforce-content h1 span {
+    color: var(--wf-primary);
+}
+
+.jcd-workforce-content p {
+    max-width: 620px;
+    margin: 0 0 17px;
+    color: var(--wf-muted);
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+
+/* Intro button */
+
+.jcd-workforce-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 15px 25px;
+    border: 1px solid var(--wf-primary);
+    border-radius: 100px;
+    background: var(--wf-primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.jcd-workforce-btn i {
+    transition: transform .3s ease;
+}
+
+.jcd-workforce-btn:hover {
+    background: var(--wf-primary-dark);
+    border-color: var(--wf-primary-dark);
+    color: #fff;
+}
+
+.jcd-workforce-btn:hover i {
+    transform: translateY(4px);
+}
+
+
+/* =========================================
+   05. WORKFORCE STAT
+========================================= */
+
+.jcd-workforce-stat {
+    position: relative;
+    padding: 15px;
+    background: var(--wf-primary);
+    border-radius: 8px;
+    isolation: isolate;
+}
+
+.jcd-workforce-stat-inner {
+    position: relative;
+    z-index: 2;
+    min-height: 370px;
+    padding: 45px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.jcd-workforce-stat-label {
+    display: block;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,.7);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.jcd-workforce-number {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    color: #fff;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: clamp(75px, 9vw, 115px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -5px;
+}
+
+.jcd-workforce-number .jcd-plus {
+    margin-top: 8px;
+    color: #8eafff;
+    font-size: 55px;
+    line-height: 1;
+}
+
+.jcd-workforce-stat-inner h3 {
+    margin: 10px 0 12px;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.jcd-workforce-stat-inner p {
+    max-width: 350px;
+    margin: 0;
+    color: rgba(255,255,255,.72);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.jcd-workforce-stat-line {
+    width: 100%;
+    height: 1px;
+    margin: 28px 0 20px;
+    background: rgba(255,255,255,.2);
+}
+
+.jcd-workforce-stat-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,.8);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.jcd-workforce-stat-footer i {
+    color: #8eafff;
+    font-size: 18px;
+}
+
+.jcd-workforce-decoration {
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    border-top: 2px solid var(--wf-primary);
+    border-right: 2px solid var(--wf-primary);
+}
+
+
+/* =========================================
+   06. WORKFORCE HIGHLIGHTS
+========================================= */
+
+.jcd-workforce-highlights {
+    padding: 0 0 30px;
+    background: #fff;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.jcd-workforce-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.jcd-workforce-highlight {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 30px;
+    border-right: 1px solid #e5eaf0;
+}
+
+.jcd-workforce-highlight:first-child {
+    padding-left: 0;
+}
+
+.jcd-workforce-highlight:last-child {
+    border-right: 0;
+}
+
+.jcd-workforce-highlight-icon {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #edf2ff;
+    color: var(--wf-primary);
+    font-size: 22px;
+    transition: .3s ease;
+}
+
+.jcd-workforce-highlight:hover .jcd-workforce-highlight-icon {
+    background: var(--wf-primary);
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+.jcd-workforce-highlight h3 {
+    margin: 0 0 6px;
+    color: var(--wf-navy);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.jcd-workforce-highlight p {
+    margin: 0;
+    color: var(--wf-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   07. SHARED SECTION HEADING
+========================================= */
+
+.jcd-workforce-section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.jcd-workforce-section-heading .jcd-workforce-eyebrow {
+    justify-content: center;
+}
+
+.jcd-workforce-section-heading h2 {
+    margin: 0 0 15px;
+    color: #000;
+    font-size: clamp(30px, 3.5vw, 42px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.8px;
+}
+
+.jcd-workforce-section-heading h2 span {
+    color: var(--wf-primary);
+}
+
+.jcd-workforce-section-heading p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--wf-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   08. WORKFORCE MEMBERS SECTION
+========================================= */
+
+.jcd-workforce-members {
+    padding: 100px 0;
+    background: #f5f7fa;
+}
+
+
+/* =========================================
+   09. MEMBER GRID
+========================================= */
+
+.jcd-member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+
+/* =========================================
+   10. MEMBER CARD
+========================================= */
+
+.jcd-member-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8edf3;
+    border-radius: 6px;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.jcd-member-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(18,59,87,.10);
+}
+
+
+/* Member image */
+
+.jcd-member-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    background: #e8edf3;
+}
+
+.jcd-member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .6s ease;
+}
+
+.jcd-member-card:hover .jcd-member-image img {
+    transform: scale(1.06);
+}
+
+.jcd-member-number {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: var(--wf-primary);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Member details */
+
+.jcd-member-info {
+    padding: 24px;
+}
+
+.jcd-member-category {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--wf-primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.jcd-member-info h3 {
+    margin: 0 0 7px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.jcd-member-info p {
+    margin: 0;
+    color: var(--wf-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* Member actions */
+
+.jcd-member-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #e9edf2;
+}
+
+.jcd-member-view {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 43px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 100px;
+    background: var(--wf-primary);
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.jcd-member-view:hover {
+    background: var(--wf-primary-dark);
+    color: #fff;
+}
+
+.jcd-member-download {
+    flex-shrink: 0;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dce3ec;
+    border-radius: 100px;
+    color: var(--wf-primary);
+    font-size: 15px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.jcd-member-download:hover {
+    background: var(--wf-primary);
+    border-color: var(--wf-primary);
+    color: #fff;
+}
+
+
+/* =========================================
+   11. WORKFORCE AUTO LOAD
+========================================= */
+
+/* Keep hidden cards out of the layout */
+.jcd-workforce-page .jcd-member-card[style*="display: none"] {
+    display: none !important;
+}
+
+/* Newly loaded cards */
+.jcd-workforce-page .jcd-member-card.is-newly-loaded {
+    animation: jcdMemberFadeUp .7s ease both;
+}
+
+@keyframes jcdMemberFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   12. COMPANY DOCUMENTS
+========================================= */
+
+.jcd-workforce-documents {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.jcd-workforce-doc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* Document card */
+
+.jcd-document-card {
+    overflow: hidden;
+    border: 1px solid #e5eaf0;
+    border-radius: 5px;
+    background: #fff;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.jcd-document-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(18,59,87,.09);
+}
+
+
+/* Document preview */
+
+.jcd-document-preview {
+    position: relative;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #edf2fa;
+}
+
+.jcd-document-preview::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    right: -50px;
+    border: 1px solid rgba(28,76,186,.15);
+    border-radius: 50%;
+}
+
+.jcd-document-preview::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    bottom: -160px;
+    left: -60px;
+    border: 1px solid rgba(28,76,186,.15);
+    border-radius: 50%;
+}
+
+.jcd-document-icon {
+    position: relative;
+    z-index: 2;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--wf-primary);
+    font-size: 30px;
+    box-shadow: 0 8px 25px rgba(18,59,87,.08);
+    transition: .3s ease;
+}
+
+.jcd-document-card:hover .jcd-document-icon {
+    background: var(--wf-primary);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.jcd-document-type {
+    position: absolute;
+    z-index: 2;
+    top: 17px;
+    left: 17px;
+    padding: 7px 11px;
+    border-radius: 3px;
+    background: #fff;
+    color: var(--wf-primary);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.jcd-document-watermark {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    color: rgba(28,76,186,.06);
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+
+/* Document details */
+
+.jcd-document-info {
+    padding: 25px;
+}
+
+.jcd-document-category {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--wf-primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.jcd-document-info h3 {
+    margin: 0 0 10px;
+    color: var(--wf-navy);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.jcd-document-info p {
+    min-height: 48px;
+    margin: 0;
+    color: var(--wf-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* Document actions */
+
+.jcd-document-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #e9edf2;
+}
+
+.jcd-document-view {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 43px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 100px;
+    background: var(--wf-primary);
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.jcd-document-view:hover {
+    background: var(--wf-primary-dark);
+    color: #fff;
+}
+
+.jcd-document-download {
+    flex-shrink: 0;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dce3ec;
+    border-radius: 100px;
+    color: var(--wf-primary);
+    font-size: 15px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.jcd-document-download:hover {
+    background: var(--wf-primary);
+    border-color: var(--wf-primary);
+    color: #fff;
+}
+
+
+/* =========================================
+   13. DOCUMENT NOTE
+========================================= */
+
+.jcd-workforce-document-note {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 45px;
+    padding: 22px 25px;
+    border-left: 3px solid var(--wf-primary);
+    background: #f5f7fa;
+}
+
+.jcd-workforce-document-note > i {
+    flex-shrink: 0;
+    color: var(--wf-primary);
+    font-size: 23px;
+}
+
+.jcd-workforce-document-note p {
+    flex: 1;
+    margin: 0;
+    color: var(--wf-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.jcd-workforce-document-note a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    color: var(--wf-primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.jcd-workforce-document-note a:hover {
+    color: var(--wf-primary-dark);
+    gap: 13px;
+}
+
+
+/* =========================================
+   14. PDF POPUP MODAL
+========================================= */
+
+.jcd-pdf-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0,0,0,.80);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .3s ease, visibility .3s ease;
+}
+
+.jcd-pdf-modal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* Modal content */
+
+.jcd-pdf-modal-content {
+    width: 100%;
+    max-width: 1100px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 70px rgba(0,0,0,.3);
+    transform: translateY(25px);
+    transition: transform .3s ease;
+}
+
+.jcd-pdf-modal.active .jcd-pdf-modal-content {
+    transform: translateY(0);
+}
+
+
+/* Modal header */
+
+.jcd-pdf-modal-header {
+    flex-shrink: 0;
+    min-height: 65px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: #123b57;
+    color: #fff;
+}
+
+.jcd-pdf-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.jcd-pdf-modal-title > i {
+    flex-shrink: 0;
+    color: #ff7100;
+    font-size: 21px;
+}
+
+.jcd-pdf-modal-title h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.jcd-pdf-modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.jcd-pdf-modal-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 5px;
+    background: #ff7100;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: .3s ease;
+}
+
+.jcd-pdf-modal-actions a:hover {
+    background: #e56300;
+    color: #fff;
+}
+
+.jcd-pdf-modal-actions button {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.jcd-pdf-modal-actions button:hover {
+    background: rgba(255,255,255,.12);
+}
+
+
+/* PDF frame */
+
+.jcd-pdf-frame {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    background: #e9edf2;
+}
+
+.jcd-pdf-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #fff;
+}
+
+
+/* Body scroll lock */
+
+body.jcd-pdf-open {
+    overflow: hidden;
+}
+
+
+/* =========================================
+   15. TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .jcd-workforce-intro-grid {
+        gap: 40px;
+    }
+
+    .jcd-member-grid,
+    .jcd-workforce-doc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   16. MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .breadcrumb-inner {
+        min-height: 50px;
+        padding: 0 18px;
+        gap: 10px;
+    }
+
+    .breadcrumb-home,
+    .breadcrumb-current {
+        font-size: 13px;
+    }
+
+    .jcd-workforce-intro {
+        padding: 55px 0;
+    }
+
+    .jcd-workforce-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .jcd-workforce-content h1 {
+        font-size: 38px;
+    }
+
+    .jcd-workforce-stat-inner {
+        min-height: 320px;
+        padding: 35px 25px;
+    }
+
+    .jcd-workforce-highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jcd-workforce-highlight {
+        padding: 15px 0;
+        border-right: 0;
+        border-bottom: 1px solid #e5eaf0;
+    }
+
+    .jcd-workforce-highlight:last-child {
+        border-bottom: 0;
+    }
+
+    .jcd-workforce-members,
+    .jcd-workforce-documents {
+        padding: 70px 0;
+    }
+
+    .jcd-workforce-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .jcd-workforce-section-heading h2 {
+        font-size: 31px;
+    }
+
+    .jcd-workforce-section-heading p {
+        font-size: 13px;
+    }
+
+    .jcd-member-grid,
+    .jcd-workforce-doc-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .jcd-member-image {
+        height: 300px;
+    }
+
+    .jcd-member-info,
+    .jcd-document-info {
+        padding: 22px;
+    }
+
+    .jcd-document-preview {
+        min-height: 175px;
+    }
+
+    .jcd-document-info p {
+        min-height: auto;
+    }
+
+    .jcd-workforce-document-note {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 13px;
+        padding: 20px;
+    }
+
+    .jcd-workforce-document-note p {
+        flex-basis: calc(100% - 40px);
+    }
+
+    .jcd-workforce-document-note a {
+        margin-left: 37px;
+    }
+
+}
+
+
+/* =========================================
+   17. PDF POPUP MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .jcd-pdf-modal {
+        padding: 8px;
+    }
+
+    .jcd-pdf-modal-content {
+        height: 94vh;
+        border-radius: 7px;
+    }
+
+    .jcd-pdf-modal-header {
+        min-height: 58px;
+        padding: 9px 10px;
+        gap: 8px;
+    }
+
+    .jcd-pdf-modal-title {
+        gap: 7px;
+    }
+
+    .jcd-pdf-modal-title > i {
+        font-size: 17px;
+    }
+
+    .jcd-pdf-modal-title h3 {
+        font-size: 12px;
+    }
+
+    .jcd-pdf-modal-actions {
+        gap: 5px;
+    }
+
+    .jcd-pdf-modal-actions a {
+        gap: 5px;
+        padding: 9px;
+        font-size: 11px;
+    }
+
+    .jcd-pdf-modal-actions button {
+        width: 30px;
+        height: 35px;
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================
+   18. SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .jcd-member-image {
+        height: 250px;
+    }
+
+    .jcd-workforce-section-heading h2 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================
+   19. ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .jcd-workforce-page [data-reveal]:not(.jcd-member-card) {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .jcd-workforce-page .jcd-member-card.is-newly-loaded {
+        animation: none;
+    }
+
+}
