@@ -522,7 +522,7 @@ button {
 .hero-meta span {
     padding: 9px 15px;
     border: 1px solid rgba(255, 255, 255, .35);
-    border-radius: 4px;
+    border-radius: 100px;
     background: rgba(255, 255, 255, .08);
     font-size: 13px;
     font-weight: 600;
