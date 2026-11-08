@@ -452,7 +452,7 @@
 
 .jcd-career-description h2 {
     font-family: "Roboto Slab", serif;
-    color: var(--navy);
+    color: #000;
     font-size: 25px;
     line-height: 1.4;
     margin: 0 0 12px;
@@ -506,7 +506,7 @@
 
 .jcd-career-detail-heading h3 {
     font-family: "Roboto Slab", serif;
-    color: var(--navy);
+    color: #000;
     font-size: 15px;
     line-height: 1.4;
     margin: 0;
@@ -581,7 +581,7 @@
 }
 
 .jcd-career-vacancy-text h3 {
-    color: var(--navy);
+    color: #000;
     font-family: "Roboto Slab", serif;
     font-size: 17px;
     margin: 0 0 6px;
