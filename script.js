@@ -501,32 +501,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     paint(); start();
 
-    /* =====================================
-       6. BACK TO TOP
-    ===================================== */
-
-    const backTop = document.querySelector(".back-top");
-
-    if (backTop) {
-
-        function updateBackTop() {
-            backTop.classList.toggle("visible", window.scrollY > 350);
-        }
-
-        window.addEventListener("scroll", updateBackTop, { passive: true });
-
-        updateBackTop();
-
-        backTop.addEventListener("click", function () {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        });
-
-    }
 
 
     /* =====================================
@@ -1023,3 +997,40 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+/* =====================================
+   BACK TO TOP - ALL PAGES
+===================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const backTop = document.querySelector(".back-top");
+
+    if (!backTop) return;
+
+    function updateBackTop() {
+
+        if (window.scrollY > 350) {
+            backTop.classList.add("visible");
+        } else {
+            backTop.classList.remove("visible");
+        }
+
+    }
+
+    window.addEventListener("scroll", updateBackTop, {
+        passive: true
+    });
+
+    updateBackTop();
+
+    backTop.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+});
