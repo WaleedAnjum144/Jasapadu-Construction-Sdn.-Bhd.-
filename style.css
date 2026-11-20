@@ -3759,3 +3759,116 @@ span.reg-color{
         transform: none !important;
     }
 }
+
+
+/* =========================================================
+   HOME PAGE - PROPOSAL TEASER
+========================================================= */
+.kdc-promo {
+    position: relative;
+    padding: 10px 0 85px;
+}
+
+.kdc-promo-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.kdc-promo-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.kdc-promo-label::before {
+    content: "";
+    width: 28px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--primary);
+}
+
+.kdc-promo h2 {
+    margin: 0 0 14px;
+    color: #000;
+    font: 700 clamp(28px, 3.5vw, 42px)/1.2 "Roboto Slab", serif;
+    letter-spacing: -.8px;
+}
+
+.kdc-promo h2 span {
+    color: var(--primary);
+}
+
+.kdc-promo p {
+    max-width: 540px;
+    margin: 0 0 28px;
+    color: #667481;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.kdc-promo-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.kdc-promo-stats div {
+    padding: 34px 24px;
+    border-radius: 12px;
+    background: #f4f4f4;
+    text-align: center;
+    transition: background-color .8s ease, transform .6s ease, box-shadow .8s ease;
+}
+
+.kdc-promo-stats div:hover {
+    transform: translateY(-6px);
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(18, 59, 87, .10);
+}
+
+.kdc-promo-stats strong {
+    display: block;
+    color: var(--primary);
+    font: 600 clamp(26px, 3vw, 38px)/1.1 "Roboto Slab", serif;
+}
+
+.kdc-promo-stats small {
+    display: inline-block;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+    color: #222;
+    font: 500 14px Inter, Arial, sans-serif;
+}
+
+/* Tablet / mobile */
+@media (max-width: 991px) {
+    .kdc-promo-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 775px) {
+    .kdc-promo {
+        padding: 10px 0 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kdc-promo-stats {
+        gap: 10px;
+    }
+
+    .kdc-promo-stats div {
+        padding: 24px 12px;
+    }
+}

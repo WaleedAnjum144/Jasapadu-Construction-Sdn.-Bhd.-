@@ -1,0 +1,958 @@
+/* =========================================
+   PAGE BREADCRUMB
+========================================= */
+
+.breadcrumb-section {
+    width: 100%;
+    background: #f5f7fa;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.breadcrumb-inner {
+    max-width: 1200px;
+    min-height: 58px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.breadcrumb-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-home:hover {
+    color: var(--primary);
+}
+
+.breadcrumb-home i {
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.breadcrumb-arrow {
+    color: #a0a8b3;
+    font-size: 11px;
+}
+
+.breadcrumb-current {
+    font-family: 'Inter', Arial, 'Noto Sans SC';
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 775px) {
+    .breadcrumb-inner {
+        min-height: 50px;
+        padding: 0 18px;
+        gap: 10px;
+    }
+
+    .breadcrumb-home,
+    .breadcrumb-current {
+        font-size: 13px;
+    }
+}
+
+
+
+/* ---------------------------------------------------------
+   1. SHARED PAGE HELPERS
+--------------------------------------------------------- */
+.pp-head {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.pp-head .section-title {
+    margin-bottom: 12px;
+    font-size: clamp(26px, 3.5vw, 40px);
+}
+
+.pp-head p {
+    margin: 0;
+    color: #667481;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   OUR PROPOSAL PAGE  (style/proposal.css)
+   Load AFTER style.css. Uses tokens: --primary, --primary-dark,
+   --navy, --muted. Breakpoints: 991 / 775 / 560 / 380
+   Header, footer and breadcrumb are NOT styled here.
+========================================================= */
+
+/* ---------- shared ---------- */
+.pp-title {
+    margin: 0 0 14px;
+    color: var(--primary);
+    font: 600 clamp(26px, 3.4vw, 40px)/1.25 "Roboto Slab", serif;
+}
+
+.pp-title-light {
+    color: #fff;
+}
+
+.pp-head {
+    max-width: 720px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.pp-head p {
+    margin: 0;
+    color: #667481;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.pp-timeline-section .pp-head p {
+    color: #c4d6e3;
+}
+
+.pp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 0 28px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.pp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+}
+
+.pp-btn-light {
+    background: #fff;
+    color: var(--primary);
+}
+
+.pp-btn-light:hover {
+    background: #eaf1ff;
+}
+
+.pp-btn-ghost {
+    border-color: rgba(255, 255, 255, .7);
+    color: #fff;
+}
+
+.pp-btn-ghost:hover {
+    background: #fff;
+    color: var(--primary);
+}
+
+/* ---------- 1. HERO ---------- */
+.pp-hero {
+    position: relative;
+    padding: 80px 0 90px;
+    background:
+        linear-gradient(90deg, rgba(8, 27, 39, .94) 0%, rgba(18, 59, 87, .88) 60%, rgba(28, 76, 186, .75) 100%),
+        url("/asset/bg-home-intro.jpg") center / cover;
+    color: #fff;
+}
+
+.pp-hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.pp-tag {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, .08);
+    color: #f4b942;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.pp-hero-copy h1 {
+    margin: 0 0 20px;
+    font: 700 clamp(32px, 4.6vw, 56px)/1.15 "Roboto Slab", serif;
+}
+
+.pp-hero-copy p {
+    max-width: 560px;
+    margin: 0 0 30px;
+    color: rgba(255, 255, 255, .88);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.pp-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.pp-facts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.pp-facts li {
+    padding: 26px 22px;
+    border-left: 3px solid #f4b942;
+    background: rgba(12, 35, 49, .78);
+    backdrop-filter: blur(8px);
+}
+
+.pp-facts span {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, .7);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pp-facts strong {
+    font: 600 clamp(22px, 2.6vw, 30px)/1.2 "Roboto Slab", serif;
+    white-space: nowrap;
+}
+
+/* ---------- 2. SCOPE ---------- */
+.pp-scope {
+    padding: 85px 0 60px;
+}
+
+.pp-scope-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: start;
+    gap: 55px;
+}
+
+.pp-scope-text p {
+    margin: 0 0 16px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.pp-gate {
+    display: flex;
+    gap: 16px;
+    margin-top: 26px;
+    padding: 22px 24px;
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+    background: #f1f5fd;
+}
+
+.pp-gate i {
+    margin-top: 3px;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.pp-gate b {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--navy);
+    font-size: 15px;
+}
+
+.pp-gate span {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pp-table-card {
+    padding: 34px 32px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 34px rgba(18, 59, 87, .12);
+}
+
+.pp-table-card h3 {
+    margin: 0 0 14px;
+    color: var(--primary);
+    font: 600 22px "Roboto Slab", serif;
+}
+
+.pp-table-card dl {
+    margin: 0;
+}
+
+.pp-table-card dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e6ebf0;
+}
+
+.pp-table-card dl div:last-child {
+    border-bottom: 0;
+}
+
+.pp-table-card dt {
+    color: #667481;
+    font-size: 14px;
+}
+
+.pp-table-card dd {
+    margin: 0;
+    color: #111;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* ---------- 3. HIGHLIGHTS ---------- */
+.pp-highlights {
+    padding: 50px 0 80px;
+}
+
+.pp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.pp-grid article {
+    min-width: 0;
+    padding: 44px 30px;
+    border-radius: 12px;
+    background: #f4f4f4;
+    text-align: center;
+    transition: background-color .8s ease, transform .6s ease, box-shadow .8s ease;
+}
+
+.pp-grid article:hover {
+    transform: translateY(-6px);
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(18, 59, 87, .10);
+}
+
+.pp-icon {
+    margin-bottom: 16px;
+    color: var(--primary);
+    font-size: 46px;
+    line-height: 1.2;
+    transition: transform .45s cubic-bezier(.22, 1, .36, 1);
+}
+
+.pp-grid article:hover .pp-icon {
+    transform: scale(1.12);
+}
+
+.pp-grid h3 {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font: 600 22px/1.4 "Roboto Slab", serif;
+}
+
+.pp-grid p {
+    margin: 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ---------- 4. TIMELINE ---------- */
+.pp-timeline-section {
+    padding: 80px 0;
+    background: #143d58;
+    color: #fff;
+}
+
+.pp-timeline {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+    counter-reset: step;
+}
+
+/* connecting line */
+.pp-timeline::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: rgba(255, 255, 255, .25);
+}
+
+.pp-timeline li {
+    position: relative;
+    padding-top: 52px;
+    counter-increment: step;
+}
+
+.pp-timeline li::before {
+    content: counter(step);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--primary);
+    font: 700 14px Inter, Arial, sans-serif;
+}
+
+.pp-timeline li:last-child::before {
+    background: #f4b942;
+    color: #123b57;
+}
+
+.pp-months {
+    display: block;
+    margin-bottom: 6px;
+    color: #8dc5e8;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pp-timeline b {
+    display: block;
+    margin-bottom: 8px;
+    font: 600 17px/1.3 "Roboto Slab", serif;
+}
+
+.pp-timeline small {
+    display: block;
+    color: #c4d6e3;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ---------- 5. COST ---------- */
+.pp-cost {
+    padding: 85px 0;
+}
+
+.pp-cost-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 28px;
+}
+
+.pp-cost-card,
+.pp-phase-card {
+    padding: 34px 32px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 34px rgba(18, 59, 87, .12);
+}
+
+.pp-cost-card h3,
+.pp-phase-card h3 {
+    margin: 0 0 8px;
+    color: var(--primary);
+    font: 600 22px/1.3 "Roboto Slab", serif;
+}
+
+.pp-cost-sub {
+    margin: 0 0 24px;
+    color: #667481;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pp-bar {
+    display: flex;
+    height: 22px;
+    overflow: hidden;
+    border-radius: 100px;
+    background: #e6ebf0;
+}
+
+.pp-bar span {
+    height: 100%;
+}
+
+.c1 {
+    background: #123b57;
+}
+
+.c2 {
+    background: #1c4cba;
+}
+
+.c3 {
+    background: #4b82e8;
+}
+
+.c4 {
+    background: #8dc5e8;
+}
+
+.c5 {
+    background: #f4b942;
+}
+
+.c6 {
+    background: #d9534f;
+}
+
+.pp-legend {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pp-legend li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid #eef1f5;
+    color: #333;
+    font-size: 14px;
+}
+
+.pp-legend li:last-child {
+    border-bottom: 0;
+}
+
+.pp-legend i {
+    flex: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.pp-legend b {
+    margin-left: auto;
+    color: var(--navy);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.pp-phase-card h3 {
+    margin-bottom: 22px;
+}
+
+.pp-phase-row {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr) 80px;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eef1f5;
+}
+
+.pp-phase-row span {
+    color: #111;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pp-phase-row small {
+    display: block;
+    margin-top: 2px;
+    color: #667481;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.pp-phase-row em {
+    display: block;
+    height: 10px;
+    overflow: hidden;
+    border-radius: 100px;
+    background: #e6ebf0;
+}
+
+.pp-phase-row em i {
+    display: block;
+    height: 100%;
+    border-radius: 100px;
+    background: var(--primary);
+}
+
+.pp-phase-row b {
+    color: var(--navy);
+    font-size: 14px;
+    text-align: right;
+}
+
+.pp-cost-note {
+    margin: 18px 0 0;
+    color: #667481;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ---------- 6. FIRST 90 DAYS ---------- */
+.pp-next {
+    padding: 0 0 85px;
+}
+
+.pp-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.pp-step {
+    padding: 32px 30px;
+    border-top: 4px solid var(--primary);
+    border-radius: 0 0 12px 12px;
+    background: #f4f4f4;
+}
+
+.pp-step>span {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 7px 16px;
+    border-radius: 100px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pp-step ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pp-step li {
+    position: relative;
+    padding: 8px 0 8px 24px;
+    color: #222;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.pp-step li::before {
+    content: "\f00c";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--primary);
+    font: 900 12px "Font Awesome 7 Free", "Font Awesome 6 Free", sans-serif;
+}
+
+/* ---------- 7. PDF VIEWER ---------- */
+.pp-viewer {
+    padding: 80px 0 90px;
+    background: #f4f6fa;
+}
+
+.pp-pdf {
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 34px rgba(18, 59, 87, .12);
+}
+
+.pp-pdf-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px 24px;
+    background: var(--primary);
+    color: #fff;
+}
+
+.pp-pdf-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pp-pdf-title i {
+    font-size: 20px;
+}
+
+.pp-pdf-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pp-pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-radius: 100px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background-color .3s ease, color .3s ease, transform .3s ease;
+}
+
+.pp-pdf-btn:hover {
+    background: #fff;
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.pp-pdf-btn-fill {
+    background: #fff;
+    color: var(--primary);
+}
+
+.pp-pdf-btn-fill:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #fff;
+}
+
+.pp-pdf-frame {
+    height: 820px;
+    background: #e8edf2;
+}
+
+.pp-pdf-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.pp-pdf-fallback {
+    display: none;
+    margin: 0;
+    padding: 30px 20px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.pp-pdf-fallback a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.pp-note {
+    max-width: 800px;
+    margin: 26px auto 0;
+    color: #687887;
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 991px) {
+
+    .pp-hero-inner,
+    .pp-scope-grid,
+    .pp-cost-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .pp-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .pp-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .pp-timeline {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 34px;
+    }
+
+    .pp-timeline::before {
+        display: none;
+    }
+
+    .pp-pdf-frame {
+        height: 700px;
+    }
+}
+
+@media (max-width: 775px) {
+    .pp-hero {
+        padding: 50px 0 55px;
+    }
+
+    .pp-scope {
+        padding: 50px 0 35px;
+    }
+
+    .pp-highlights {
+        padding: 35px 0 50px;
+    }
+
+    .pp-timeline-section {
+        padding: 50px 0;
+    }
+
+    .pp-cost {
+        padding: 50px 0;
+    }
+
+    .pp-next {
+        padding-bottom: 50px;
+    }
+
+    .pp-viewer {
+        padding: 50px 0 60px;
+    }
+
+    .pp-head {
+        margin-bottom: 28px;
+    }
+
+    .pp-head p,
+    .pp-hero-copy p,
+    .pp-scope-text p {
+        font-size: 14px;
+    }
+
+    .pp-grid article {
+        padding: 28px 16px;
+    }
+
+    .pp-icon {
+        font-size: 34px;
+    }
+
+    .pp-grid h3 {
+        font-size: 17px;
+    }
+
+    .pp-grid p {
+        font-size: 13px;
+    }
+
+    .pp-table-card,
+    .pp-cost-card,
+    .pp-phase-card {
+        padding: 24px 20px;
+    }
+
+    .pp-pdf-bar {
+        padding: 14px 16px;
+    }
+
+    .pp-pdf-title {
+        font-size: 13px;
+    }
+
+    .pp-pdf-frame {
+        height: 560px;
+    }
+}
+
+@media (max-width: 560px) {
+    .pp-actions {
+        flex-direction: column;
+    }
+
+    .pp-btn {
+        width: 100%;
+    }
+
+    .pp-facts {
+        gap: 8px;
+    }
+
+    .pp-facts li {
+        padding: 18px 14px;
+    }
+
+    .pp-facts strong {
+        font-size: 19px;
+    }
+
+    .pp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pp-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pp-phase-row {
+        grid-template-columns: 100px minmax(0, 1fr) 70px;
+        gap: 10px;
+    }
+
+    .pp-pdf-buttons {
+        width: 100%;
+    }
+
+    .pp-pdf-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    /* phones often cannot scroll embedded PDFs */
+    .pp-pdf-frame {
+        height: auto;
+    }
+
+    .pp-pdf-frame iframe {
+        display: none;
+    }
+
+    .pp-pdf-fallback {
+        display: block;
+    }
+}
+
+@media (max-width: 380px) {
+    .pp-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .pp-phase-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .pp-phase-row b {
+        text-align: left;
+    }
+}
