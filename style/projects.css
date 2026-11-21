@@ -109,7 +109,7 @@
 .jcd-projects-heading h2 {
     font-family: "Roboto Slab", serif;
     margin: 0 0 17px;
-    color: var(--jcd-text);
+    color: #000;
     font-size: clamp(32px, 4vw, 48px);
     line-height: 1.15;
     font-weight: 800;
